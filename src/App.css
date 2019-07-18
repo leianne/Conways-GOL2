@@ -1,0 +1,132 @@
+body {
+  font-family: 'Barriecito', cursive;
+  background-color: #222222
+}
+  
+.gameBoard {
+  display: flex;
+}
+
+.rightContainer {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: space-evenly;
+}
+
+.leftContainer {
+  width: 85%;
+  padding: 20px;
+}
+
+.btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.btns {
+  font-family: 'Barriecito', cursive;
+  font-size: 20px;
+  background-color: lightgray;
+  color: #222222;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.btns button{
+  font-family: 'Barriecito', cursive;
+  font-size: 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-menu a {
+  padding: 10px;
+}
+
+.btnsTop {
+  width: 100%;
+}
+
+.btnsBottom {
+  width: 90%;
+}
+.btns:hover {
+  color: #00CCFF;
+}
+.box {
+  display: inline-block;       
+  width: 15px;
+  border-radius: 4px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  
+}
+.off {
+  border: 1px solid rgb(0, 255, 242);
+}
+.on {
+  border: 1px solid rgb(0, 255, 242);
+
+}
+.pride {
+  border: 1px solid rgb(0, 255, 242);
+  background-color: rgb(30, 255, 0);
+}
+
+.love {
+  border: 1px solid red;
+  background-color: pink;
+}
+
+.funky {
+  border: 1px solid slateblue;
+  background-color: darkorange;
+}
+
+.on {
+  background-color: white;
+}
+  
+.box:hover { 
+  background: #00CCFF;
+}
+
+.center {
+  margin: auto;
+  display: table;
+  margin-top: 10px;
+}
+
+.grid {
+  width: 100%;
+  line-height: 0;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding-right: -90px;
+}
+  
+h1, h2, h3, h4 {
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 0px;
+}
