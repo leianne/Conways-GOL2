@@ -7,6 +7,7 @@ import SizeBtns  from './components/SizeBtns';
 import ColorBtns from './components/ColorBtns';
 import PremadeBtns from './components/PremadeBtns';
 import { love, spongebob, sunshine } from './resources/Premade';
+import LearnMore from './components/LearnMore';
 class App extends Component {
 
   constructor() {
@@ -192,7 +193,9 @@ class App extends Component {
 			</ol>
 		</div>
 	  </div>
-	  
+	  <div className="learnMore">
+		<LearnMore/>
+	  </div>
 	  </>
     );  
   }

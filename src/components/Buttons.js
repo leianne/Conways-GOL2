@@ -24,7 +24,7 @@ class Buttons extends Component {
 						Fast
 						</button>
 						<button className="btns" onClick={this.props.seedGrid}>
-						Seed
+						Fill
 						</button>
 					</div>
 								

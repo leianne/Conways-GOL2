@@ -9,7 +9,7 @@ class SizeBtns extends  Component {
     render() {
         return (
             <div className="btnsBottom">
-                <h3>Grid Size</h3>
+                <h3>Board Size</h3>
                 <button className="btns" onClick={() => this.handleSelect("1")}>15x15</button>
                 <button className="btns" onClick={() => this.handleSelect("2")}>50x30</button>
             </div>		
