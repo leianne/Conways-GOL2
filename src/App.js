@@ -5,6 +5,8 @@ import Grid  from './components/Grid';
 import Buttons from './components/Buttons';
 import SizeBtns  from './components/SizeBtns';
 import ColorBtns from './components/ColorBtns';
+import PremadeBtns from './components/PremadeBtns';
+import { love, spongebob, sunshine } from './resources/Premade';
 class App extends Component {
 
   constructor() {
@@ -86,14 +88,31 @@ class App extends Component {
 				this.rows = 30;
 			break;
 			default:
-				this.columns = 70;
-				this.rows = 50;
+				return;
 		}
 		this.clearGrid();
 		clearInterval(this.intervalId);
-
   }
   
+  gridPremade = (style) => {
+	clearInterval(this.intervalId);
+
+	switch (style) {
+		case "heart":
+			this.setState({
+				gridFull: love
+			}); 
+		break;
+		case "spongebob":
+			this.setState({
+				gridFull: spongebob
+			}); 
+		break;
+		default:
+			return
+	}
+	}
+
   gridColor = (color) => {
 	this.setState({
 		color: color
@@ -129,7 +148,7 @@ class App extends Component {
 	console.log(this.state.gridFull)
 	return (
 	<>
-	  <h1>Conway's Game of Life</h1>
+	  <h1 className="header">Conway's Game of Life</h1>
       <div className="gameBoard">
 		<div className="leftContainer">
 		<Buttons
@@ -152,8 +171,28 @@ class App extends Component {
 		<div className="rightContainer">
 			<SizeBtns gridSize={this.gridSize} />
 			<ColorBtns gridColor={this.gridColor} />
+			<PremadeBtns gridPremade={this.gridPremade} />
+
 		</div>
       </div>
+	  <br/>
+	  <div className="btmHolder">
+	  <div  className="btmContainer">
+			<h3>About Game  of  Life</h3>
+			<p>The Game of Life is not your typical computer game. It is a 'cellular automaton', and was invented by Cambridge mathematician John Conway.</p>
+			<p>This game became widely known when it was mentioned in an article published by Scientific American in 1970. It consists of a collection of cells which, based on a few mathematical rules, can live, die or multiply. Depending on the initial conditions, the cells form various patterns throughout the course of the game.</p>
+		</div>
+		<div  className="btmContainer">
+			<h3>Game  of  Life Rules</h3>
+			<ol>
+				<li>Any live cell with fewer than two live neighbours dies (referred to as underpopulation or exposure[1]).</li>
+				<li>Any live cell with more than three live neighbours dies (referred to as overpopulation or overcrowding).</li>
+				<li>Any live cell with two or three live neighbours lives, unchanged, to the next generation.</li>
+				<li>Any dead cell with exactly three live neighbours will come to life.</li>
+			</ol>
+		</div>
+	  </div>
+	  
 	  </>
     );  
   }
