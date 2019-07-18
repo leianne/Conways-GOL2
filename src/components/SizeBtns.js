@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 
 class SizeBtns extends  Component {
     
@@ -11,8 +10,8 @@ class SizeBtns extends  Component {
         return (
             <div className="btnsBottom">
                 <h3>Grid Size</h3>
-                <Button className="btns" onClick={() => this.handleSelect("1")}>15x15</Button>
-                <Button className="btns" onClick={() => this.handleSelect("2")}>50x30</Button>
+                <button className="btns" onClick={() => this.handleSelect("1")}>15x15</button>
+                <button className="btns" onClick={() => this.handleSelect("2")}>50x30</button>
             </div>		
         )
     }

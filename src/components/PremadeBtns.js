@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 
 class PremadeBtns extends Component {
 
@@ -10,8 +9,8 @@ class PremadeBtns extends Component {
         return (
             <div className="btnsBottom">
                 <h3>Premade Designs</h3>
-                <Button className="btns" onClick={() => this.handleSelect("heart")}>Heart</Button>
-                <Button className="btns" onClick={() => this.handleSelect("spongebob")}>SpongeBob</Button>
+                <button className="btns" onClick={() => this.handleSelect("heart")}>Heart</button>
+                <button className="btns" onClick={() => this.handleSelect("spongebob")}>SpongeBob</button>
             </div>
         )
     }
